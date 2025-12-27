@@ -5,6 +5,36 @@ A comprehensive Python tool for analyzing and visualizing liquidation levels on 
 ![Python](https://img.shields.io/badge/python-3.9%2B-blue)
 ![License](https://img.shields.io/badge/license-MIT-green)
 
+## 📊 Liquidation Levels Visualization
+
+<p align="center">
+  <img src="assets/heatmap_preview.png" alt="Hyperliquid Liquidation Heatmap" width="800"/>
+</p>
+
+<p align="center">
+  <em>Example: BTC liquidation levels heatmap showing where long (green) and short (red) positions would be liquidated</em>
+</p>
+
+```
+                ← Long Liquidations              Short Liquidations →
+                                  │
+    $99,000   ─────────────      │      ██████████████████  ← Short cluster
+    $98,000   ──────             │      ████████████████
+    $97,000   ────               │      ██████████████
+    $96,500   ──                 │      ████████
+              ─────────────────────────────────────────────
+    $95,000                  Current Price ($95,000)
+              ─────────────────────────────────────────────
+    $93,500   ████               │
+    $93,000   ████████████       │
+    $92,000   ████████████████   │        ← Long cluster
+    $91,000   ██████████████████ │
+    $90,000   ██████████         │
+                                 │
+```
+
+The heatmap shows liquidation clusters similar to how order book depth is displayed on the Hyperliquid trading interface. **Green bars** indicate where long positions will be liquidated if price drops, while **red bars** show where short positions will be liquidated if price rises. Larger bars = more value at risk at that price level.
+
 ## Table of Contents
 
 - [Features](#features)

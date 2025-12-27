@@ -47,9 +47,12 @@ env/
 
 # Output directory (generated files)
 output/
-*.png
 *.html
 *.json
+
+# Ignore generated images, but keep README assets
+*.png
+!assets/*.png
 
 # Logs
 *.log
